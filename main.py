@@ -20,5 +20,5 @@ for item in description :
             ouverture:ouverture
         })
 
-with open("./out/index.json") as file:
+with open("./out/index.json","w+") as file:
     file.write(json.dumps(liste))
