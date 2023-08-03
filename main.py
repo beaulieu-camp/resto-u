@@ -12,7 +12,7 @@ description = state.find_all("span", {"class": "restaurant_opening_state"})
 
 for item in description :
     nom = item.parent.find("div",{"class":"restaurant_title"}).text
-    ouverture = item["data-opening"]
+    ouverture = item["data-opening"].split(",")
 
     if "astrolabe" in nom.lower() or "insa" in nom.lower() or "etoile" in nom.lower() :
         liste.append({
