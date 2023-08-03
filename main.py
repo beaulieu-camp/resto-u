@@ -16,8 +16,8 @@ for item in description :
 
     if "astrolabe" in nom.lower() or "insa" in nom.lower() or "etoile" in nom.lower() :
         liste.append({
-            nom:nom,
-            ouverture:ouverture
+            "nom":nom,
+            "ouverture":ouverture
         })
 
 with open("./out/index.json","w+") as file:
