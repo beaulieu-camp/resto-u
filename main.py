@@ -3,7 +3,12 @@ import json
 import requests
 
 
-data = requests.get("https://www.crous-rennes.fr/se-restaurer/ou-manger/").text
+req = requests.get("https://www.crous-rennes.fr/se-restaurer/ou-manger/")
+
+if req.status_code != 200 : raise Exception("Api Univ Pété") 
+
+data = req.text
+
 state = BeautifulSoup(data,features="html.parser")
 
 liste = []
